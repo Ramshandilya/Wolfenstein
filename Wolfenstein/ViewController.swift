@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let panRecognizer = UIPanGestureRecognizer()
 
     var world = World(
-        player: Player(position: Vector(x: 2, y: 2),
+        player: Player(position: Vector(x: 2.5, y: 2.5),
                        velocity: Vector(x: 0, y: 0),
                        direction: Vector(x: 1, y: 0)),
         map: loadMap()!)

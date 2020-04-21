@@ -43,21 +43,19 @@ extension Bitmap {
         let difference = to - from
         let stepCount: Int
         let step: Vector
-
         if abs(difference.x) > abs(difference.y) {
-            stepCount = Int(abs(difference.x.rounded(.up)))
+            stepCount = Int(abs(difference.x).rounded(.up))
             let sign: Double = difference.x > 0 ? 1 : -1
             step = Vector(x: 1, y: difference.y/difference.x) * sign
         } else {
-            stepCount = Int(abs(difference.y.rounded(.up)))
+            stepCount = Int(abs(difference.y).rounded(.up))
             let sign: Double = difference.y > 0 ? 1 : -1
             step = Vector(x: difference.x/difference.y, y: 1) * sign
         }
-
-        var postion = from
+        var position = from
         for _ in 0..<stepCount {
-            self[Int(postion.x), Int(postion.y)] = color
-            postion += step
+            self[Int(position.x), Int(position.y)] = color
+            position += step
         }
     }
 }
