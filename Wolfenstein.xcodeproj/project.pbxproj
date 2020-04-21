@@ -23,6 +23,7 @@
 		0A304ACD244E5F50008DD8E2 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A304ACC244E5F50008DD8E2 /* World.swift */; };
 		0A304ACF244E6037008DD8E2 /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A304ACE244E6037008DD8E2 /* map.json */; };
 		0A304AD1244EA0F2008DD8E2 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A304AD0244EA0F2008DD8E2 /* Ray.swift */; };
+		0A304AD3244F794D008DD8E2 /* Renderer3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A304AD2244F794D008DD8E2 /* Renderer3D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0A304ACC244E5F50008DD8E2 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		0A304ACE244E6037008DD8E2 /* map.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
 		0A304AD0244EA0F2008DD8E2 /* Ray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ray.swift; sourceTree = "<group>"; };
+		0A304AD2244F794D008DD8E2 /* Renderer3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer3D.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				0A304AC4244E37D9008DD8E2 /* Vector.swift */,
 				0A304ABC244E21DD008DD8E2 /* Color.swift */,
 				0A304AC0244E2A85008DD8E2 /* Renderer.swift */,
+				0A304AD2244F794D008DD8E2 /* Renderer3D.swift */,
 				0A304ABE244E2231008DD8E2 /* Bitmap.swift */,
 				0A304ACA244E5EC6008DD8E2 /* Tile.swift */,
 				0A304AC8244E3DBF008DD8E2 /* Rect.swift */,
@@ -176,6 +179,7 @@
 				0A304AA9244E20FE008DD8E2 /* AppDelegate.swift in Sources */,
 				0A304AAB244E20FE008DD8E2 /* SceneDelegate.swift in Sources */,
 				0A304AC3244E36F2008DD8E2 /* Player.swift in Sources */,
+				0A304AD3244F794D008DD8E2 /* Renderer3D.swift in Sources */,
 				0A304ACD244E5F50008DD8E2 /* World.swift in Sources */,
 				0A304AD1244EA0F2008DD8E2 /* Ray.swift in Sources */,
 				0A304ACB244E5EC6008DD8E2 /* Tile.swift in Sources */,

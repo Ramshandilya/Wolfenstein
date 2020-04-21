@@ -45,7 +45,8 @@ class ViewController: UIViewController {
 
 
     @objc func update(_ displayLink: CADisplayLink) {
-        var renderer = Renderer(width: 256, height: 256)
+//        var renderer = Renderer(width: 256, height: 256)
+        var renderer = Renderer3D(width: 256, height: 256)
         let timestep = displayLink.timestamp - previousTime
 
         world.update(timestep: timestep, input: joystickVector)
