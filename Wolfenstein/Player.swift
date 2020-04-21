@@ -11,10 +11,15 @@ import Foundation
 struct Player {
     var position: Vector
     var velocity: Vector
+    var direction: Vector
+    
     let radius: Double = 0.25
     let speed: Double = 2
 
     mutating func update(timestep: Double, input: Vector) {
+        if input.length > 0 {
+            direction = input / input.length
+        }
         velocity = input * speed
         position += velocity * timestep
         position.x.formTruncatingRemainder(dividingBy: 8)

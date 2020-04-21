@@ -31,5 +31,7 @@ struct Renderer {
             }
         }
         bitmap.fill(rect: world.player.rect * scale, color: .blue)
+        let end = (world.player.position + world.player.direction * 100)
+        bitmap.drawLine(from: world.player.position * scale, to: end * scale, color: .green)
     }
 }
