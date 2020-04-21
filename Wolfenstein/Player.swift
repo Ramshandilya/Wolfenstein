@@ -15,12 +15,12 @@ struct Player {
     
     let radius: Double = 0.25
     let speed: Double = 2
+    let turningSpeed = 2.0
 
     mutating func update(timestep: Double, input: Vector) {
-        if input.length > 0 {
-            direction = input / input.length
-        }
-        velocity = input * speed
+        direction = direction.rotate(by: input.x * turningSpeed * timestep)
+        velocity = -input.y * direction * speed
+
         position += velocity * timestep
         position.x.formTruncatingRemainder(dividingBy: 8)
         position.y.formTruncatingRemainder(dividingBy: 8)

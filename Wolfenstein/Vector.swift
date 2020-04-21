@@ -70,3 +70,10 @@ extension Vector {
         (x*x + y*y).squareRoot()
     }
 }
+
+extension Vector {
+    func rotate(by radians: Double) -> Vector {
+        Vector(x: x * cos(radians) + y * -sin(radians),
+               y: x * sin(radians) + y * cos(radians))
+    }
+}

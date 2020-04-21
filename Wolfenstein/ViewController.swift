@@ -42,8 +42,6 @@ class ViewController: UIViewController {
         displayLink.add(to: .main, forMode: .common)
     }
 
-
-
     @objc func update(_ displayLink: CADisplayLink) {
 //        var renderer = Renderer(width: 256, height: 256)
         var renderer = Renderer3D(width: 256, height: 256)
