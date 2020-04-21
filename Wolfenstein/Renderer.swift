@@ -33,5 +33,12 @@ struct Renderer {
         bitmap.fill(rect: world.player.rect * scale, color: .blue)
         let end = world.map.hitTest(Ray(origin: world.player.position, direction: world.player.direction)) * scale
         bitmap.drawLine(from: world.player.position * scale, to: end, color: .green)
+
+        let focalLength = 1.0
+        let planeWidth = 1.0
+        let viewCenter = world.player.position + world.player.direction * focalLength
+        let viewStart = viewCenter - world.player.direction.orthogonal * planeWidth / 2
+        let viewEnd = viewCenter + world.player.direction.orthogonal * planeWidth / 2
+        bitmap.drawLine(from: viewStart * scale, to: viewEnd * scale, color: .red)
     }
 }

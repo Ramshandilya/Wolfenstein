@@ -11,6 +11,10 @@ import Foundation
 struct Vector {
     var x: Double
     var y: Double
+
+    var orthogonal: Vector {
+        Vector(x: -y, y: x)
+    }
 }
 
 extension Vector {
