@@ -37,7 +37,9 @@ struct Renderer3D {
             let height = focalLength * wallHeight / wallDistance.length * Double(bitmap.height)
             let wallStart = Vector(x: Double(col), y: (Double(bitmap.height) - height) / 2)
             let wallEnd = Vector(x: Double(col), y: (Double(bitmap.height) + height) / 2)
-            bitmap.drawLine(from: wallStart, to: wallEnd, color: .white)
+
+            let wallColor = wallIntersection.x.rounded() == wallIntersection.x ? Color.white : .gray
+            bitmap.drawLine(from: wallStart, to: wallEnd, color: wallColor)
         }
     }
 }
