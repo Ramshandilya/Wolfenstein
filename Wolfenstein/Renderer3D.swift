@@ -17,7 +17,7 @@ struct Renderer3D {
 
     mutating func draw(world: World) {
         let focalLength = 1.0
-        let planeWidth = 1.0
+        let planeWidth = Double(bitmap.width) / Double(bitmap.height)
         let viewCenter = world.player.position + world.player.direction * focalLength
         let viewStart = viewCenter - world.player.direction.orthogonal * planeWidth / 2
 
@@ -32,9 +32,10 @@ struct Renderer3D {
             let wallIntersection = world.map.hitTest(ray)
             position += step
 
-            let wallDistance = wallIntersection - world.player.position
             let wallHeight = 1.0
-            let height = focalLength * wallHeight / wallDistance.length * Double(bitmap.height)
+            let wallDistance = wallIntersection - world.player.position
+            let perpendicularDistance = wallDistance.length / end.length
+            let height = focalLength * wallHeight / perpendicularDistance * Double(bitmap.height)
             let wallStart = Vector(x: Double(col), y: (Double(bitmap.height) - height) / 2)
             let wallEnd = Vector(x: Double(col), y: (Double(bitmap.height) + height) / 2)
 
